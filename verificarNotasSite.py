@@ -60,8 +60,9 @@ try:
         prova = notas[2]
         driver.quit()
         os.system('cls')
-        media = (float(exercicios)*0.2)+(float(desafios)*0.3)+(float(prova)*0.5)
-        print(f'Você tirou {exercicios} nos exercícios do portal, {desafios} nos desafios e {prova} na prova! Além disso, sua média final foi {media} Parabéns pelo seu esforço e dedicação! 🤗')
+        desafios = float(desafios.replace(',', '.'))
+        media = (float(exercicios)*0.2)+(desafios*0.3)+(float(prova)*0.5)
+        print(f'Você tirou {exercicios} nos exercícios do portal, {desafios} nos desafios e {prova} na prova! Além disso, sua média final foi {media}. Parabéns pelo seu esforço e dedicação! 🤗')
 
     logar()
     verNotas()
